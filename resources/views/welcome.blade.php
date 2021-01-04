@@ -33,5 +33,15 @@
     {{-- modal example --}}
     {{-- <x-alpine.modal></x-alpine.modal> --}}
 
-    <x-alpine.sidebar></x-alpine.sidebar>
+    {{-- sidebar example --}}
+    {{-- <x-alpine.sidebar></x-alpine.sidebar> --}}
+
+    {{-- tabs example --}}
+    {{-- <x-alpine.tabs></x-alpine.tabs> --}}
+
+    {{-- images example (like tabs but with pictures) --}}
+    {{-- <x-alpine.images></x-alpine.images> --}}
+
+    {{-- scroll detection example  --}}
+    <x-alpine.scroll></x-alpine.scroll>
 </x-layout>
