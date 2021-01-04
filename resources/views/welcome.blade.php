@@ -21,9 +21,9 @@
 
     {{-- toggle example --}}
 
-    {{-- <x-alpine.toggle-content>
+    {{-- <x-alpine.toggle>
         hello
-    </x-alpine.toggle-content>
+    </x-alpine.toggle>
     </div> --}}
 
     {{-- toggle example with a dropdown menu --}}

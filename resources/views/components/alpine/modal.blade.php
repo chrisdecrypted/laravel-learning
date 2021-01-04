@@ -9,14 +9,11 @@
 
             <div x-data="{ isOpen: false }">
                 <button
-                    {{-- @click="isOpen = true 
-                    $nextTick(() => $refs.modalCloseButton.focus())" --}}
-                  
                     @click="isOpen = true
                     $nextTick(() => $refs.modalCloseButton.focus())"  
 
                     class="bg-blue-700 text-white px-4 py-3 mt-4 text-sm rounded"  
-                                     
+              
                 >
                     Open Modal
                 </button>
