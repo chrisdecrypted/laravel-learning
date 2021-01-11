@@ -1,6 +1,6 @@
 # TALL Stack Components
 
-This is a mini-library of examples for commonly used components. I will periodically update as I add more items to this repo. These examples are not my own work but taken from Scrimba and Laracasts courses. 
+This is a mini-library of examples for commonly used components. I will periodically update as I add more items to this repo. **These examples are not my own work but taken from Scrimba and Laracasts courses.** 
 
 I will do my best to give credit to the authors and organize the contents on this readme. 
 
