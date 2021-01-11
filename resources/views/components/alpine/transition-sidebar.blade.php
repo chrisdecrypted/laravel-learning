@@ -10,7 +10,16 @@
                     </button>
                     
                 </div>
-                <div class="absolute top-0 left-0 bg-white border border-right h-full w-48" x-show="isOpen" @click.away="isOpen = false">
+                <div 
+                    class="absolute top-0 left-0 bg-white border border-right h-full w-48" x-show="isOpen" 
+                    @click.away="isOpen = false"
+                    x-transition:enter="transition ease-out duration-300 -ml-64"
+                    x-transition:enter-start=""
+                    x-transition:enter-end="transform translate-x-64"
+                    x-transition:leave="transition ease-out duration-300"
+                    x-transition:leave-start=""
+                    x-transition:leave-end="transform -translate-x-64"
+                >
                     <div class="flex justify-end">
                         <button class="text-2xl mr-3 mt-1" @click="isOpen = false">&times;</button>
                     </div>
@@ -37,3 +46,4 @@
                 
             </nav>
         </header>
+    </body>

@@ -1,5 +1,78 @@
 {{-- Credit: https://scrimba.com/learn/alpinejs --}}
 
+
+{{-- 
+        <div
+    x-show="open"
+    x-transition:enter="transition ease-out duration-300"
+    x-transition:enter-start="opacity-0 transform scale-90"
+    x-transition:enter-end="opacity-100 transform scale-100"
+    x-transition:leave="transition ease-in duration-300"
+    x-transition:leave-start="opacity-100 transform scale-100"
+    x-transition:leave-end="opacity-0 transform scale-90"
+>...</div>
+
+Alpine offers 6 different transition directives for applying classes to various stages of an element's transition between "hidden" and "shown" states. These directives work both with x-show AND x-if.
+
+These behave exactly like VueJs's transition directives, except they have different, more sensible names:
+
+Directive	    Description
+:enter	        Applied during the entire entering phase.
+:enter-start	Added before element is inserted, removed one frame after element is inserted.
+:enter-end	    Added one frame after element is inserted (at the same time enter-start is removed), removed when transition/animation finishes.
+:leave	        Applied during the entire leaving phase.
+:leave-start	Added immediately when a leaving transition is triggered, removed after one frame.
+:leave-end  	Added one frame after a leaving transition is triggered (at the same time leave-start is removed), removed when the transition/animation finishes.
+
+
+Tailwinds.css "under the hood":
+.transition {
+    transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
+}
+
+.transition-all	{
+    transition-property: all;
+}
+
+.ease-linear {
+    transition-timing-function: linear;
+}
+
+.duration-75 {
+    transition-duration: 75ms;
+}
+
+.duration-100 { 
+    transition-duration: 100ms;
+}
+
+.duration-150 {
+    transition-duration: 150ms;
+}
+
+.ease-in { 
+    transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
+}
+
+.ease-out { 
+    transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+}
+.ease-in-out { 
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.scale-75 {
+    transform: scale(.75);
+}
+
+.origin-top-right {
+    transform-origin: top right;
+}
+
+--}}
+
+
+
 <html>
     <head>
         <link rel="stylesheet" href="https://unpkg.com/tailwindcss@1.2.0/dist/tailwind.min.css">
@@ -30,6 +103,12 @@
                         @click.away=" isOpen = false"
                         @keydown.escape =" isOpen = false"
                         class=" absolute font-normal bg-white shadow overflow-hidden rounded w-48 border mt-2 py-1 right-0 z-20"
+                        x-transition:enter="transition transform origin-top-right ease-out duration-1000"
+                        x-transition:enter-start="opacity-0 scale-75"
+                        x-transition:enter-end="opacity-100 scale-100"
+                        x-transition:leave="transition transform origin-top-right ease-out duration-1000"
+                        x-transition:leave-start="opacity-100 scale-100"
+                        x-transition:leave-end="opacity-0 scale-75"
                     >
                         <li>
                             <a href="#" class="flex items-center px-3 py-3 hover:bg-gray-200">

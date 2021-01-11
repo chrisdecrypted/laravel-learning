@@ -1,3 +1,6 @@
+{{-- Credit: https://scrimba.com/learn/alpinejs --}}
+
+
 {{-- This example expands upon other examples --}}
 {{-- We will need to manage state for each tab and the current tab should have an active state --}}
 {{-- We have to set an event listener for each of the tabs --}}

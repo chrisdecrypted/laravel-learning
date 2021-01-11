@@ -1,3 +1,5 @@
+{{-- Credit: https://scrimba.com/learn/alpinejs --}}
+
 <div x-data="{ isOpen: false }">
     {{-- x-data sets the default state of isOpen --}}
     <button class="bg-gray-300 p-3 rounded-md" @click=" isOpen = !isOpen">

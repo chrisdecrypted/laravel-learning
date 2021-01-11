@@ -1,20 +1,14 @@
-<html>
-    <head>
-        <link rel="stylesheet" href="https://unpkg.com/tailwindcss@1.2.0/dist/tailwind.min.css">
-        <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v1.9.8/dist/alpine.js" defer></script>
-    </head>
+{{-- Credit: https://scrimba.com/learn/alpinejs --}}
+
+
     <body class="bg-gray-400">
         <div class="container mx-auto px-4 xl:px-64 mt-12 mb-12">
             <h2 class="text-2xl font-bold">Modal</h2>
 
             <div x-data="{ isOpen: false }">
                 <button
-                    @click="isOpen = true
-                    $nextTick(() => $refs.modalCloseButton.focus())"  
-
-                    class="bg-blue-700 text-white px-4 py-3 mt-4 text-sm rounded"  
-              
-                >
+                    @click="isOpen = true $nextTick(() => $refs.modalCloseButton.focus())"  
+                    class="bg-blue-700 text-white px-4 py-3 mt-4 text-sm rounded">
                     Open Modal
                 </button>
 
@@ -43,4 +37,3 @@
             </div>
         </div>
     </body>
-</html>
